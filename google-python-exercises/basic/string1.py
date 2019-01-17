@@ -24,7 +24,8 @@
 # So donuts(5) returns 'Number of donuts: 5'
 # and donuts(23) returns 'Number of donuts: many'
 def donuts(count):
-  # +++your code here+++
+  # if donuts(count) < 10:
+    print 'Number of donuts <count>'
   return
 
 
