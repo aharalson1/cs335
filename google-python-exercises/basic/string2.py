@@ -1,4 +1,4 @@
-#!/usr/bin/python2.4 -tt
+#!/usr/bin/python -tt
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
 # http://www.apache.org/licenses/LICENSE-2.0
@@ -41,8 +41,17 @@ def not_bad(s):
 # Given 2 strings, a and b, return a string of the form
 #  a-front + b-front + a-back + b-back
 def front_back(a, b):
-  # +++your code here+++
-  return
+  ad = len(a)//2
+  bd = len(b)//2
+  
+  if len(a) % 2 == 1:
+    ad = ad + 1
+    
+  if len(b) % 2 == 1:
+    bd = bd + 1
+  
+  return a[:ad] + b[:bd] + a[ad:] + b[bd:]  
+  
 
 
 # Simple provided test() function used in main() to print
