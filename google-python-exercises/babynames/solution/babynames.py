@@ -6,6 +6,13 @@
 # Google's Python Class
 # http://code.google.com/edu/languages/google-python-class/
 
+# class BabyNames:
+#   def __init__(year):
+#     boy = {}
+#     girl = {}
+
+#b2005= BabyNames(2005)
+
 import sys
 import re
 

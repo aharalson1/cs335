@@ -1,1 +1,5 @@
 git commit -m "test commit"
+
+class character:
+    #default constructor for all objects, can't call this bc its called when instatiated
+    def __init__(): 

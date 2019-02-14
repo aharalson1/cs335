@@ -38,12 +38,14 @@ print_words() and print_top().
 """
 
 import sys
+import string
 
 def wordCount_funct(filename):
   
   wordCount = {}  
   inFile = open(filename, 'r')
   for line in inFile:
+    line = line.translate(None, '\'`,.?!":;()_@[]{}*=&%|<>~/')
     words = line.split()
     for word in words:
       word = word.lower()
