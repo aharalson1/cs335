@@ -1,0 +1,28 @@
+#!/usr/bin/python
+
+import sys, math, csv
+
+def distance(una, plant):
+
+  # Calculate the great circle distance between two points 
+  # on the earth (specified in decimal degrees)
+  # **** una and plant are coordiante tuples
+  import csv
+
+  with open('example.csv') as csvfile:
+    readCSV = csv.reader(csvfile, delimiter=',')
+    for row in readCSV:
+        print(row)
+        print(row[0])
+        print(row[0],row[1],row[2],)
+ 
+  # convert decimal degrees to radians for each coordinate tuple
+  unaRad = (math.radians(una[0]), math.radians(una[1]))
+  plantRad = (math.radians(plant[0]), math.radians(plant[1]))
+  # haversine formula 
+  dlon = plantRad[0] - unaRad[0] 
+  dlat = plantRad[1] - unaRad[1] 
+  a = math.sin(dlat/2)**2 + math.cos(unaRad[1]) * math.cos(plantRad[1]) * math.sin(dlon/2)**2
+  c = 2 * math.asin(math.sqrt(a)) 
+  mi = 3953 * c
+  return mi

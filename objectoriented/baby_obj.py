@@ -8,13 +8,14 @@ class BabyNames :
     def __init__(self, year):
         self.year = year
     
-    def retrieveNames(self, url):
+    def retrieve_names(self, url):
         #create a method to retrieve the names
-
+        self.names = names
+        self.url = url
         #self names = result
         
-    def printNames(self):
-        print self.names
+    def print_names(self):
+      print self.names
         #iterate through self.names and print list
         
 def main():
